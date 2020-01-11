@@ -9,13 +9,23 @@ use App\Entity\Bookings;
 use Symfony\Component\Mime\Email;
 use DateTime;
 use DateInterval;
+use Symfony\Component\Routing\Annotation\Route;
+
 
 class MainController extends AbstractController
 {
-    public function index()
+    /**
+     * @Route("/main_page", name="main_page")
+     */
+
+    public function main_page()
     {
         return $this->render('base.html.twig');
     }
+
+    /**
+     * @Route("/", name="index")
+     */
 
     public function maintenance()
     {
