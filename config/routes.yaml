@@ -1,6 +1,11 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
-homepage:
+index:
+  path: /index
+  controller : App\Controller\MainController::index
+
+maintenance:
   path: /
   controller: App\Controller\MainController::maintenance
+
