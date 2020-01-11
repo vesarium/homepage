@@ -10,7 +10,7 @@ use Symfony\Component\Mime\Email;
 use DateTime;
 use DateInterval;
 
-class BookingController extends AbstractController
+class MainController extends AbstractController
 {
     public function index()
     {
