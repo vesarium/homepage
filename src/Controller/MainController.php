@@ -16,4 +16,9 @@ class MainController extends AbstractController
     {
         return $this->render('base.html.twig');
     }
+
+    public function maintenance()
+    {
+        return $this->render('maintenance.html.twig');
+    }
 }
