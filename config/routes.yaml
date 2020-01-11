@@ -4,6 +4,3 @@
 #homepage:
   path: /
   controller: App\Controller\MainController::maintenance
-
-  path: /index
-  controller: App\Controller\MainController::index
