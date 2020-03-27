@@ -1,332 +1,199 @@
-;(function () {
+// -----------------------------------------------------
+// -------------- Window Load Function -----------------
+// -----------------------------------------------------
+
+$(window).on("load", function() {
 	
-	'use strict';
-
-	var mobileMenuOutsideClick = function() {
-
-		$(document).click(function (e) {
-	    var container = $("#gtco-offcanvas, .js-gtco-nav-toggle");
-	    if (!container.is(e.target) && container.has(e.target).length === 0) {
-	    	$('.js-gtco-nav-toggle').addClass('gtco-nav-white');
-
-	    	if ( $('body').hasClass('offcanvas') ) {
-
-    			$('body').removeClass('offcanvas');
-    			$('.js-gtco-nav-toggle').removeClass('active');
-				
-	    	}
-	    
-	    	
-	    }
-		});
-
-	};
-
-
-	var offcanvasMenu = function() {
-
-		$('#page').prepend('<div id="gtco-offcanvas" />');
-		$('#page').prepend('<a href="#" class="js-gtco-nav-toggle gtco-nav-toggle gtco-nav-white"><i></i></a>');
-		var clone1 = $('.menu-1 > ul').clone();
-		$('#gtco-offcanvas').append(clone1);
-		var clone2 = $('.menu-2 > ul').clone();
-		$('#gtco-offcanvas').append(clone2);
-
-		$('#gtco-offcanvas .has-dropdown').addClass('offcanvas-has-dropdown');
-		$('#gtco-offcanvas')
-			.find('li')
-			.removeClass('has-dropdown');
-
-		// Hover dropdown menu on mobile
-		$('.offcanvas-has-dropdown').mouseenter(function(){
-			var $this = $(this);
-
-			$this
-				.addClass('active')
-				.find('ul')
-				.slideDown(500, 'easeOutExpo');				
-		}).mouseleave(function(){
-
-			var $this = $(this);
-			$this
-				.removeClass('active')
-				.find('ul')
-				.slideUp(500, 'easeOutExpo');				
-		});
-
-
-		$(window).resize(function(){
-
-			if ( $('body').hasClass('offcanvas') ) {
-
-    			$('body').removeClass('offcanvas');
-    			$('.js-gtco-nav-toggle').removeClass('active');
-				
-	    	}
-		});
-	};
-
-
-	var burgerMenu = function() {
-
-		$('body').on('click', '.js-gtco-nav-toggle', function(event){
-			var $this = $(this);
-
-
-			if ( $('body').hasClass('overflow offcanvas') ) {
-				$('body').removeClass('overflow offcanvas');
-			} else {
-				$('body').addClass('overflow offcanvas');
-			}
-			$this.toggleClass('active');
-			event.preventDefault();
-
-		});
-	};
-
-
-
-	var contentWayPoint = function() {
-		var i = 0;
-
-		// $('.gtco-section').waypoint( function( direction ) {
-
-
-			$('.animate-box').waypoint( function( direction ) {
-
-				if( direction === 'down' && !$(this.element).hasClass('animated-fast') ) {
-					
-					i++;
-
-					$(this.element).addClass('item-animate');
-					setTimeout(function(){
-
-						$('body .animate-box.item-animate').each(function(k){
-							var el = $(this);
-							setTimeout( function () {
-								var effect = el.data('animate-effect');
-								if ( effect === 'fadeIn') {
-									el.addClass('fadeIn animated-fast');
-								} else if ( effect === 'fadeInLeft') {
-									el.addClass('fadeInLeft animated-fast');
-								} else if ( effect === 'fadeInRight') {
-									el.addClass('fadeInRight animated-fast');
-								} else {
-									el.addClass('fadeInUp animated-fast');
-								}
-
-								el.removeClass('item-animate');
-							},  k * 200, 'easeInOutExpo' );
-						});
-						
-					}, 100);
-					
-				}
-
-			} , { offset: '85%' } );
-		// }, { offset: '90%'} );
-	};
-
-
-	var dropdown = function() {
-
-		$('.has-dropdown').mouseenter(function(){
-
-			var $this = $(this);
-			$this
-				.find('.dropdown')
-				.css('display', 'block')
-				.addClass('animated-fast fadeInUpMenu');
-
-		}).mouseleave(function(){
-			var $this = $(this);
-
-			$this
-				.find('.dropdown')
-				.css('display', 'none')
-				.removeClass('animated-fast fadeInUpMenu');
-		});
-
-	};
-
-
-	var owlCarousel = function(){
-		
-		var owl = $('.owl-carousel-carousel');
-		owl.owlCarousel({
-			items: 3,
-			loop: true,
-			margin: 20,
-			nav: true,
-			dots: true,
-			smartSpeed: 800,
-			autoHeight: true,
-			navText: [
-		      "<i class='ti-arrow-left owl-direction'></i>",
-		      "<i class='ti-arrow-right owl-direction'></i>"
-	     	],
-	     	responsive:{
-	        0:{
-	            items:1
-	        },
-	        600:{
-	            items:2
-	        },
-	        1000:{
-	            items:3
-	        }
-	    	}
-		});
-
-
-		var owl = $('.owl-carousel-fullwidth');
-		owl.owlCarousel({
-			items: 1,
-			loop: true,
-			margin: 20,
-			nav: true,
-			dots: true,
-			smartSpeed: 800,
-			autoHeight: true,
-			navText: [
-		      "<i class='ti-arrow-left owl-direction'></i>",
-		      "<i class='ti-arrow-right owl-direction'></i>"
-	     	]
-		});
-
-
-		
-
-	};
-
-	var tabs = function() {
-
-		// Auto adjust height
-		$('.gtco-tab-content-wrap').css('height', 0);
-		var autoHeight = function() {
-
-			setTimeout(function(){
-
-				var tabContentWrap = $('.gtco-tab-content-wrap'),
-					tabHeight = $('.gtco-tab-nav').outerHeight(),
-					formActiveHeight = $('.tab-content.active').outerHeight(),
-					totalHeight = parseInt(tabHeight + formActiveHeight + 90);
-
-					tabContentWrap.css('height', totalHeight );
-
-				$(window).resize(function(){
-					var tabContentWrap = $('.gtco-tab-content-wrap'),
-						tabHeight = $('.gtco-tab-nav').outerHeight(),
-						formActiveHeight = $('.tab-content.active').outerHeight(),
-						totalHeight = parseInt(tabHeight + formActiveHeight + 90);
-
-						tabContentWrap.css('height', totalHeight );
-				});
-
-			}, 100);
-			
-		};
-
-		autoHeight();
-
-
-		// Click tab menu
-		$('.gtco-tab-nav a').on('click', function(event){
-			
-			var $this = $(this),
-				tab = $this.data('tab');
-
-			$('.tab-content')
-				.addClass('animated-fast fadeOutDown');
-
-			$('.tab-content')
-				.removeClass('active');
-
-			$('.gtco-tab-nav li').removeClass('active');
-			
-			$this
-				.closest('li')
-					.addClass('active')
-
-			$this
-				.closest('.gtco-tabs')
-					.find('.tab-content[data-tab-content="'+tab+'"]')
-					.removeClass('animated-fast fadeOutDown')
-					.addClass('animated-fast active fadeIn');
-
-
-			autoHeight();
-			event.preventDefault();
-
-		}); 
-	};
-
-
-	var goToTop = function() {
-
-		$('.js-gotop').on('click', function(event){
-			
-			event.preventDefault();
-
-			$('html, body').animate({
-				scrollTop: $('html').offset().top
-			}, 500, 'easeInOutExpo');
-			
-			return false;
-		});
-
-		$(window).scroll(function(){
-
-			var $win = $(window);
-			if ($win.scrollTop() > 200) {
-				$('.js-top').addClass('active');
-			} else {
-				$('.js-top').removeClass('active');
-			}
-
-		});
-	
-	};
-
-
-	// Loading page
-	var loaderPage = function() {
-		$(".gtco-loader").fadeOut("slow");
-	};
-
-	var counter = function() {
-		$('.js-counter').countTo({
-			 formatter: function (value, options) {
-	      return value.toFixed(options.decimals);
-	    },
-		});
-	};
-
-	var counterWayPoint = function() {
-		if ($('#gtco-counter').length > 0 ) {
-			$('#gtco-counter').waypoint( function( direction ) {
-										
-				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-					setTimeout( counter , 400);					
-					$(this.element).addClass('animated');
-				}
-			} , { offset: '90%' } );
-		}
-	};
-
-	
-	$(function(){
-		mobileMenuOutsideClick();
-		offcanvasMenu();
-		burgerMenu();
-		contentWayPoint();
-		dropdown();
-		owlCarousel();
-		tabs();
-		goToTop();
-		loaderPage();
-		counterWayPoint();
+	// -----------------------------------------------------
+	// -------------------- Preloader ----------------------
+	// -----------------------------------------------------
+
+	$('#preloader').delay(100).fadeOut('slow', function () {
+		$(this).remove();
 	});
 
+	// -----------------------------------------------------
+	// ---------------- Porfolio isotope -------------------
+	// -----------------------------------------------------  
+	
+    var portfolioIsotope = $('.portfolio-container').isotope({
+        itemSelector: '.portfolio-grid-item'
+    });
 
-}());
+    $('#portfolio-flters li').on('click', function() {
+        $("#portfolio-flters li").removeClass('filter-active');
+        $(this).addClass('filter-active');
+
+        portfolioIsotope.isotope({
+            filter: $(this).data('filter')
+        });
+    });
+
+});
+
+
+
+$(document).ready(function(){
+	"use strict";
+
+	var nav = $('nav');
+	var navHeight = nav.outerHeight();
+	
+	$('.navbar-toggler').on('click', function () {
+		if (!$('#mainNav').hasClass('navbar-reduce')) {
+			$('#mainNav').addClass('navbar-reduce');
+		}
+	});
+
+	// -----------------------------------------------------
+	// ---------------  Navbar Menu Reduce  ----------------
+	// -----------------------------------------------------
+	
+	$(window).trigger('scroll');
+	$(window).on('scroll', function () {
+		var pixels = 50;
+		var top = 1200;
+		if ($(window).scrollTop() > pixels) {
+			$('.navbar-expand-md').addClass('navbar-reduce');
+			$('.navbar-expand-md').removeClass('navbar-trans');
+		} else {
+			$('.navbar-expand-md').addClass('navbar-trans');
+			$('.navbar-expand-md').removeClass('navbar-reduce');
+		}
+		if ($(window).scrollTop() > top) {
+			$('.scrolltop-mf').fadeIn(1000, "easeInOutExpo");
+		} else {
+			$('.scrolltop-mf').fadeOut(1000, "easeInOutExpo");
+		}
+	});
+
+	// -----------------------------------------------------
+	// ---------------  Back to top button  ----------------
+	// -----------------------------------------------------
+
+	$(window).on("scroll", function () {
+		if ($(this).scrollTop() > 100) {
+			$('.back-to-top').fadeIn('slow');
+		} else {
+			$('.back-to-top').fadeOut('slow');
+		}
+	});
+	$('.back-to-top').on("click", function () {
+		$('html, body').animate({
+			scrollTop: 0
+		}, 1500, 'easeInOutExpo');
+		return false;
+	});
+
+	// -----------------------------------------------------
+	// ---------------  Star ScrollTop  --------------------
+	// -----------------------------------------------------
+
+	$('.scrolltop-mf').on("click", function () {
+		$('html, body').animate({
+			scrollTop: 0
+		}, 1000);
+	});
+
+	// -----------------------------------------------------
+	// ---------------  Star Scrolling nav  ----------------
+	// -----------------------------------------------------
+ 
+	$('a.js-scroll[href*="#"]:not([href="#"])').on("click", function () {
+		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			if (target.length) {
+				$('html, body').animate({
+					scrollTop: (target.offset().top - navHeight + 30)
+				}, 1000, "easeInOutExpo");
+				return false;
+			}
+		}
+	});
+
+	// -----------------------------------------------------
+	// -------------  Closes responsive menu ---------------
+	// -----------------------------------------------------
+
+	$('.js-scroll').on("click", function () {
+		$('.navbar-collapse').collapse('hide');
+	});
+
+	// -----------------------------------------------------
+	// -------------  navbar items on scroll ---------------
+	// -----------------------------------------------------
+
+	$('body').scrollspy({
+		target: '#mainNav',
+		offset: navHeight
+	});
+
+	// -----------------------------------------------------
+	// -------------- Youtube Popup video ------------------
+	// -----------------------------------------------------
+
+    $('.popup-video').magnificPopup({
+		type: 'iframe',
+	});
+	
+	// -----------------------------------------------------
+	// -------------------- Client owl ---------------------
+	// -----------------------------------------------------
+	$('.client-slide').owlCarousel({
+		autoplay: true,
+		autoplayTimeout: 4000,
+		nav: false,
+		smartSpeed: 1000,
+		dots: true,
+		autoplayHoverPause: true,
+		loop: true,
+		responsive: {
+			0: {
+				items: 2
+			},
+			600: {
+				items: 3
+			},
+			1000: {
+				dotsEach: 3,
+				items: 6
+			}
+		}
+	});
+	
+	// -----------------------------------------------------
+	// ------------------ Magnific Popup -------------------
+	// -----------------------------------------------------
+
+    var magnifPopup = function() {
+        $('.popup-img').magnificPopup({
+            type: 'image',
+            removalDelay: 300,
+            mainClass: 'mfp-with-zoom',
+            gallery: {
+                enabled: true
+            },
+            zoom: {
+                enabled: true, // By default it's false, so don't forget to enable it
+
+                duration: 300, // duration of the effect, in milliseconds
+                easing: 'ease-in-out', // CSS transition easing function
+
+                // The "opener" function should return the element from which popup will be zoomed in
+                // and to which popup will be scaled down
+                // By defailt it looks for an image tag:
+                opener: function(openerElement) {
+                    // openerElement is the element on which popup was initialized, in this case its <a> tag
+                    // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+                    return openerElement.is('img') ? openerElement : openerElement.find('img');
+                }
+            }
+        });
+    };
+
+    // Call the functions
+    magnifPopup();
+	
+
+}); // document read end 

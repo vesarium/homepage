@@ -17,7 +17,7 @@ class MainController extends AbstractController
      */
     public function main_page()
     {
-        return $this->render('base.html.twig');
+        return $this->render('main.html.twig');
     }
 
     /**

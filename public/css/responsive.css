@@ -1,0 +1,356 @@
+
+
+@media only screen and (min-width: 1080px) and (max-width: 1920px){
+
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px){
+	.about-side-image {
+		height: 68%;
+	}
+	.about-bottom-content {
+		padding-bottom: 0;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+	.navbar-nav.navbar-sub-button .button {
+		padding: 8px 30px;
+	}
+	.navbar-nav.navbar-sub-button {
+		margin-left: 15px;
+	}
+	.intro:after {
+		right: 85px;
+		bottom: 90px;
+		background-size: 80%;
+	}
+	.about-side-image {
+		height: 50%;
+	}
+	.about-bottom-content {
+		padding-bottom: 0;
+	}
+	.about-bottom-content h2 {
+		font-size: 32px;
+	}
+	.service-right-side {
+		margin-top: 50px;
+	}
+	#portfolio .portfolio-list .nav li {
+		padding: 18px 18px;
+	}
+	.Subscribe-newsletter {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	form.Subscribe-form input {
+		width: 75%;
+	}
+	.Subscribe-form .subscribe-button {
+		width: 25%;
+	}
+	.footer-link {
+		margin-top: 30px;
+	}
+	.footer-social-list {
+		text-align: center !important;
+		margin-bottom: 15px;
+	}
+
+	.copyright-text {
+		text-align: center !important;
+		margin-top: 10px;
+	}
+}
+
+/* Tablet Layout: 768px. */
+
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+
+	.navbar-b.navbar-trans .nav-item, .navbar-b.navbar-reduce .nav-item {
+		padding-right: 5px;
+	}
+
+}
+
+@media only screen and (max-width: 767px) {
+
+	.navbar-b.navbar-trans .nav-item, .navbar-b.navbar-reduce .nav-item {
+		padding-right: 5px;
+	}
+	.navbar-toggler span {
+		background-color: #000;
+	}
+	.home-content h1 {
+		font-size: 40px;
+	}
+	.intro:after {
+		background-size: 85%;
+	}
+}
+
+
+
+@media only screen and (max-width: 479px) {
+	.navbar-collapse .navbar-nav {
+		margin-top: 10px;
+	}
+	.navbar-toggler span {
+		background-color: #000;
+	}
+	.intro:after {
+		display: none;
+	}
+	.section-title h2 {
+		font-size: 30px;
+	}
+	.home-content h1 {
+		font-size: 35px;
+	}
+	.home-content p {
+		font-size: 18px;
+	}
+	.home-content .video-box h4 {
+		font-size: 20px;
+	}
+	.about-side-image {
+		display: none;
+	}
+	.side-image-text {
+		padding-left: 15px;
+	}
+	.about-bottom-content h2 {
+		font-size: 25px;
+		margin-bottom: 25px;
+	}
+	.about-bottom-content h4 {
+		font-size: 18px;
+		margin-bottom: 30px;
+	}
+	.about-bottom-content {
+		padding-bottom: 0;
+	}
+	.service-title h2 {
+		font-size: 30px;
+		margin-bottom: 25px;
+	}
+	.service-title h4 {
+		font-size: 18px;
+		margin-bottom: 25px;
+	}
+	.service-right-side {
+		margin-top: 50px;
+	}
+	.color1-block {
+		margin-bottom: 0;
+	}
+	.color2-block {
+		margin-bottom: 30px;
+	}
+	.portfolio-title h2 {
+		font-size: 30px;
+	}
+	#portfolio {
+		padding-top: 120px;
+	}
+	#portfolio .portfolio-list .nav {
+		display: block;
+		text-align: center;
+	}
+	#portfolio .portfolio-list .nav li {
+		float: none;
+		display: inline-block;
+		padding: 18px 25px;
+	}
+	.portfolio-grid-item figure figcaption p {
+		font-size: 18px;
+	}
+	.portfolio-grid-item figure figcaption h3 {
+		font-size: 20px;
+	}
+	.hire-content span {
+		color: #fff;
+		font-size: 15px;
+	}
+	.hire-content h2 {
+		font-size: 25px;
+	}
+	.hire-content .hire-button {
+		display: block;
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+
+	.pricing-area {
+		padding-top: 120px;
+	}
+	.pricing-title h2 {
+		font-size: 30px;
+	}
+	.pricing-content.none-active {
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	.Subscribe-newsletter h2 {
+		font-size: 25px;
+	}
+	.Subscribe-newsletter {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	form.Subscribe-form input {
+		width: 75%;
+	}
+	.Subscribe-form .subscribe-button {
+		width: 25%;
+	}
+	.footer-link {
+		margin-top: 30px;
+	}
+	.footer-social-list {
+		text-align: center !important;
+		margin-bottom: 15px;
+	}
+
+	.copyright-text {
+		text-align: center !important;
+		margin-top: 10px;
+	}
+	.mr-top-30 {
+		margin-top: 30px;
+	}
+}
+
+
+@media screen and (max-width: 320px) and (min-width: 0px){
+	.navbar-collapse .navbar-nav {
+		margin-top: 10px;
+	}
+	.navbar-collapse .navbar-nav {
+		margin-top: 10px;
+	}
+	.navbar-toggler span {
+		background-color: #000;
+	}
+	.intro:after {
+		display: none;
+	}
+	.section-title h2 {
+		font-size: 30px;
+	}
+	.home-content h1 {
+		font-size: 35px;
+	}
+	.home-content p {
+		font-size: 18px;
+	}
+	.home-content .video-box h4 {
+		font-size: 20px;
+	}
+	.about-side-image {
+		display: none;
+	}
+	.side-image-text {
+		padding-left: 15px;
+	}
+	.about-bottom-content h2 {
+		font-size: 25px;
+		margin-bottom: 25px;
+	}
+	.about-bottom-content h4 {
+		font-size: 18px;
+		margin-bottom: 30px;
+	}
+	.about-bottom-content {
+		padding-bottom: 0;
+	}
+	.service-title h2 {
+		font-size: 30px;
+		margin-bottom: 25px;
+	}
+	.service-title h4 {
+		font-size: 18px;
+		margin-bottom: 25px;
+	}
+	.service-right-side {
+		margin-top: 50px;
+	}
+	.color1-block {
+		margin-bottom: 0;
+	}
+	.color2-block {
+		margin-bottom: 30px;
+	}
+	.portfolio-title h2 {
+		font-size: 30px;
+	}
+	#portfolio {
+		padding-top: 120px;
+	}
+	#portfolio .portfolio-list .nav {
+		display: block;
+		text-align: center;
+	}
+	#portfolio .portfolio-list .nav li {
+		float: none;
+		display: inline-block;
+		padding: 18px 25px;
+	}
+	.portfolio-grid-item figure figcaption p {
+		font-size: 18px;
+	}
+	.portfolio-grid-item figure figcaption h3 {
+		font-size: 20px;
+	}
+	.hire-content span {
+		color: #fff;
+		font-size: 15px;
+	}
+	.hire-content h2 {
+		font-size: 25px;
+	}
+	.hire-content .hire-button {
+		display: block;
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+
+	.pricing-area {
+		padding-top: 120px;
+	}
+	.pricing-title h2 {
+		font-size: 30px;
+	}
+	.pricing-content.none-active {
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	.Subscribe-newsletter h2 {
+		font-size: 25px;
+	}
+	.Subscribe-newsletter {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	form.Subscribe-form input {
+		width: 75%;
+	}
+	.Subscribe-form .subscribe-button {
+		width: 25%;
+	}
+	.footer-link {
+		margin-top: 30px;
+	}
+	.footer-social-list {
+		text-align: center !important;
+		margin-bottom: 15px;
+	}
+
+	.copyright-text {
+		text-align: center !important;
+		margin-top: 10px;
+	}
+	.mr-top-30 {
+		margin-top: 30px;
+	}
+}
