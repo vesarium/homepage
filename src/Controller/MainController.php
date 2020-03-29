@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 class MainController extends AbstractController
 {
     /**
-     * @Route("/", name="main_page")
+     * @Route("/main", name="main_page")
      */
     public function main_page()
     {
@@ -21,7 +21,7 @@ class MainController extends AbstractController
     }
 
     /**
-     * @Route("/maintenance", name="maintenance")
+     * @Route("/", name="maintenance")
      */
     public function maintenance()
     {

@@ -83,7 +83,7 @@ p {
 .form-control:focus {
 	box-shadow: none;
 	outline: 0 none;
-	border-bottom: 1px solid #443b8a;
+	border-bottom: 1px solid #80B640;
 }
 
 .button {
@@ -98,7 +98,7 @@ p {
     font-size: 16px;
     border-radius: 4px;
     font-weight: 700;
-    background: #443b8a;
+    background: #80B640;
     transition: all 500ms ease;
     cursor: pointer;
     color: #fff;
@@ -199,7 +199,7 @@ dl, ol, ul {
 .back-to-top {
 	position: fixed;
 	display: none;
-	background: #443b8a;
+	background: #80B640;
 	color: #fff;
 	width: 55px;
 	height: 44px;
@@ -239,7 +239,7 @@ dl, ol, ul {
 	top: calc(50% - 30px);
 	left: calc(50% - 30px);
 	border: 6px solid #f2f2f2;
-	border-top: 6px solid #443b8a;
+	border-top: 6px solid #80B640;
 	border-radius: 50%;
 	width: 60px;
 	height: 60px;
@@ -306,11 +306,11 @@ dl, ol, ul {
 }
 
 .navbar-b.navbar-trans .nav-link:hover {
-	color: #443b8a;
+	color: #80B640;
 }
 
 .navbar-b.navbar-trans .show > .nav-link, .navbar-b.navbar-trans .active > .nav-link, .navbar-b.navbar-trans .nav-link.show, .navbar-b.navbar-trans .nav-link.active {
-	color: #443b8a;
+	color: #80B640;
 }
 
 .navbar-b.navbar-reduce {
@@ -325,15 +325,15 @@ dl, ol, ul {
 }
 
 .navbar-b.navbar-reduce .nav-link:hover {
-	color: #443b8a;
+	color: #80B640;
 }
 
 .navbar-b.navbar-reduce .show > .nav-link, .navbar-b.navbar-reduce .active > .nav-link, .navbar-b.navbar-reduce .nav-link.show, .navbar-b.navbar-reduce .nav-link.active {
-	color: #443b8a;
+	color: #80B640;
 }
 
 .navbar-b.navbar-reduce .navbar-brand {
-	color: #443b8a;
+	color: #80B640;
 }
 .navbar-b.navbar-reduce .navbar-brand span{
 	color: #FF9800;
@@ -367,13 +367,13 @@ dl, ol, ul {
 }
 
 .navbar-b .dropdown-menu .dropdown-item:hover {
-	background-color: #443b8a;
+	background-color: #80B640;
 	color: #fff;
 	transition: all 500ms ease;
 }
 
 .navbar-b .dropdown-menu .dropdown-item.active {
-	background-color: #443b8a;
+	background-color: #80B640;
 }
 
 .navbar-toggler {
@@ -447,6 +447,7 @@ dl, ol, ul {
 	background-size: cover;
 	background-position: center center;
 	z-index:1;
+	transition: visibility 0s 2s, opacity 2s linear;
 }
 
 .intro:after {
@@ -472,7 +473,7 @@ dl, ol, ul {
     font-size: 24px;
 }
 .home-content .iq-video {
-    background: #443b8a;
+    background: #80B640;
     display: inline-block;
     width: 70px;
     height: 70px;
@@ -499,7 +500,7 @@ dl, ol, ul {
 	content: "";
     display: block;
     position: absolute;
-    border: 10px solid #443b8a80;
+    border: 10px solid #80B640;
     left: -10px;
     right: -10px;
     top: -10px;
@@ -532,7 +533,14 @@ dl, ol, ul {
  * -------------------------------------------------------
  **/
 .about-area {
-    padding: 140px 0;
+    padding: 140px 0 0 0;
+	background: url(../img/lignt-bulb.png);
+	background-position: top;
+	background-opacity: 0.5;
+	background-size: contain;
+    background-repeat: no-repeat;
+
+
 }
 .about-area .about-top-area {
     padding-bottom: 150px;
@@ -654,7 +662,7 @@ dl, ol, ul {
 }
 
 .icon-block:hover {
-    background: #443b8a;
+    background: #80B640;
     transition: all ease 0.5s;
     -webkit-transition: all ease 0.5s;
 }
@@ -671,7 +679,7 @@ dl, ol, ul {
 }
 .icon-block .icon i {
     font-size: 70px;
-    color: #443b8a;
+    color: #80B640;
     margin-bottom: 10px;
     transition: all ease 0.5s;
     -webkit-transition: all ease 0.5s;
@@ -737,7 +745,7 @@ dl, ol, ul {
 }
 
 #portfolio .portfolio-list .nav li:hover, #portfolio .portfolio-list .nav li.filter-active {
-	color: #443b8a;
+	color: #80B640;
 	-moz-transition: all 0.3s ease-in-out 0s;
 	-ms-transition: all 0.3s ease-in-out 0s;
 	-o-transition: all 0.3s ease-in-out 0s;
@@ -834,7 +842,7 @@ dl, ol, ul {
  **/
 .hire-area {
     padding: 70px 0;
-    background: #443b8a;
+    background: #80B640;
 }
 
 .hire-content span {
@@ -864,7 +872,7 @@ dl, ol, ul {
     letter-spacing: 2px;
     border-radius: 4px;
     font-weight: 700;
-    background: #443b8a;
+    background: #80B640;
     transition: all 500ms ease;
     cursor: pointer;
     color: #fff;
@@ -876,7 +884,7 @@ dl, ol, ul {
 .hire-content .hire-popup-button {
     background: #fff;
     padding: 12px 30px;
-    color: #443b8a;
+    color: #80B640;
 	font-size: 16px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -906,7 +914,7 @@ dl, ol, ul {
 	border-radius: 10px 10px 10px 10px;
 }
 .active-pricing-top-section {
-    background: #443b8a;
+    background: #80B640;
     padding: 13px;
     text-align: center;
     border-radius: 10px 10px 0px 0px;
@@ -967,7 +975,7 @@ dl, ol, ul {
 
 .pricing-content .pricing-bottom-section ul li i {
     font-size: 13px;
-    color: #443b8a;
+    color: #80B640;
     padding-right: 10px;
 }
 
@@ -982,7 +990,7 @@ dl, ol, ul {
 .pricing-content .pricing-button {
     font-size: 16px;
     color: #fff;
-    background: #443b8a;
+    background: #80B640;
     font-weight: 700;
     display: block;
     padding: 12px 30px;
@@ -1034,7 +1042,7 @@ dl, ol, ul {
 }
 
 .owl-theme .owl-dots .owl-dot.active span {
-	background-color: #443b8a;
+	background-color: #80B640;
 	border-radius: 50%;
 }
 
@@ -1133,7 +1141,7 @@ form.contact-form .button i {
  * -------------------------------------------------------
  **/
  .Subscribe-area {
-    background: #443b8a;
+    background: #80B640;
     padding: 80px 0;
 }
 
@@ -1160,7 +1168,7 @@ form.Subscribe-form input {
     width: 25%;
     height: 65px;
     border: none;
-    background: #443b8a;
+    background: #80B640;
     border-radius: 0px 50px 50px 0px;
     border: none;
     display: inline-block;
@@ -1218,7 +1226,7 @@ form.Subscribe-form input {
     font-size: 16px;
 }
 .footer-social-list ul li:hover i{
-	color: #443b8a !important;
+	color: # !important;
 }
 .copyright-text p {
     color: #8a97b5;
