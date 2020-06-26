@@ -944,6 +944,10 @@ dl, ol, ul {
 
 }
 
+.iot-content h4{
+	font-size: 16px;
+}
+
 /**
  * -------------------------------------------------------
  *  09. Pricing Section Style
