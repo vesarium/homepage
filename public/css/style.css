@@ -467,6 +467,11 @@ dl, ol, ul {
     font-weight: 700;
 }
 
+.home-content h2{
+	font-family: 'Orbitron', cursive;
+	font-size: 30px;
+}
+
 .home-content p {
     margin-bottom: 50px;
     color: #8a97b5;
